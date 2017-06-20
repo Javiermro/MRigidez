@@ -1,0 +1,42 @@
+function FGlob = EnsamblajeF(loads,npoin,nload,ndime)
+
+FGlob=zeros(npoin*ndime,1)
+npos=0;
+for ifix=1:nload
+for inodo=1:npoin
+  npos=(inodo-1)*ndime+1;
+  if inodo==loads(ifix,1)    
+    FGlob(npos,1)=loads(ifix,2)
+    npos=npos+1;
+    FGlob(npos,1)=loads(ifix,3)
+    npos=npos+1;
+    FGlob(npos,1)=loads(ifix,4)
+  else
+%     FGlob(npos)=0.0
+%     npos=npos+1;
+%     FGlob(npos)=0.0
+%     npos=npos+1;
+%     FGlob(npos)=0.0
+  end     
+end
+end
+
+FGlob=FGlob';
+
+
+npos=0;
+for ifix=1:nload
+for inodo=1:npoin
+  npos=(inodo-1)*ndime+1;
+  if inodo==loads(ifix,1)    
+    FGlob(npos,1)=loads(ifix,2);
+    npos=npos+1;
+    FGlob(npos,1)=loads(ifix,3);
+  else
+%     FGlob(npos)=0.0;
+%     npos=npos+1;
+%     FGlob(npos)=0.0;
+  end     
+end
+end
+

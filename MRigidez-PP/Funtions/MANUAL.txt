@@ -1,0 +1,27 @@
+El ingreso de los datos se realiza con 4 archivos de textos:
+
+1) coordenadas_nodales.txt
+Se ingresan las coordenadas de los nodos, SIN enumerar los nodos. La cordenada x se separa de la y dejando un (o mas) espacio
+
+2) conectividades.txt
+Se ingresa la matriz de conectividades. 
+Columna 1: 1er nodo global del elemento
+Columna 2: 2do nodo global del elemento
+Columna 3: (Sección transversal del elemento)*(Módulo de elasticidad longitudinal del elemento)
+Columna 4: Angulo del elemento respecto del plano orizontal (depende de cual fue el nodo inicial elegido)
+
+3) cond_borde.txt
+Se introducen las condiciones de borde y los desplazamientos prescriptos (en caso de que sea control de desplazamiento)
+Columna 1: Nodo prescripto
+Columna 2: Condicion de prescripción en x (1=si , 0=no)
+Columna 3: Condicion de prescripción en y (1=si , 0=no)
+Columna 4: Valor prescripto en x
+Columna 5: Valor prescripto en y
+
+4) cargas_nodales.txt
+Se introducen las cargas nodales
+Columna 1: Nodo cargado
+Columna 2: Carga segun x
+Columna 3: Carga segun y
+Nota: en caso de no haber cargas exteriores, y sea un problema de control de desplazamiento, introducir una linea con tres ceros (0 0 0)
+
